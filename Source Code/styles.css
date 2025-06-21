@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    overflow: hidden;
+}
+
+.typewriter-container {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+}
+
+.typewriter-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    min-height: 3.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.typewriter-text::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    animation: blink 0.7s infinite;
+    color: #4cc9f0;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 2rem;
+    color: #a5b4fc;
+}
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4cc9f0 0%, #4361ee 100%);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(76, 201, 240, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .typewriter-text {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
